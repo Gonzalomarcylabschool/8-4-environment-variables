@@ -40,6 +40,7 @@ const serveTopArtStories = async (req, res, next) => {
     res.send(storiesWithTitle);
   } catch (error) {
     // or send an error. 503 means the service is unavailable
+    console.log( 'Error fetching top art stories:', error);
     res.status(503).send(error);
   }
 }
